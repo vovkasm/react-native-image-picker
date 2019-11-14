@@ -7,9 +7,9 @@
     "test": "jest"
   },
   "dependencies": {
+    "@vovkasm/react-native-image-picker": "file:../",
     "react": "16.6.1",
-    "react-native": "0.57.7",
-    "react-native-image-picker": "file:../"
+    "react-native": "0.57.7"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",

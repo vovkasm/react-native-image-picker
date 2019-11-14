@@ -38,7 +38,7 @@ You will also need to add `UsageDescription` on iOS and some permissions on Andr
 ## Usage
 
 ```javascript
-import ImagePicker from 'react-native-image-picker';
+import ImagePicker from '@vovkasm/react-native-image-picker';
 
 // More info on all the options is below in the API Reference... just some common use cases shown here
 const options = {
