@@ -6,18 +6,18 @@ All work on React Native ImagePicker happens directly on GitHub. Contributors se
 > **Working on your first pull request?** You can learn how from this *free* series: [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github).
 
 1. Fork the repo and create your branch from `master` (a guide on [how to fork a repository](https://help.github.com/articles/fork-a-repo/)).
-2. Run `yarn` or `npm install` to install all required dependencies.
+2. Run `npm install` to install all required dependencies.
 3. Now you are ready to make your changes!
 
 ## Tests & Verifications
 Currently we use `TypeScript` for typechecking, `eslint` with `prettier` for linting and formatting the code, and `jest` for unit testing. 
 
-* `yarn test`: Run all tests and validations.
-* `yarn validate:android`: Run Spotless style checker on the Java code.
-* `yarn validate:eslint`: Run `eslint`.
-* `yarn validate:eslint --fix`: Run `eslint` and automatically fix issues. This is useful for correcting code formatting.
-* `yarn validate:typescript`: Run `typescript` typechecking.
-* `yarn test:jest`: Run unit tests with `jest`.
+* `npm test`: Run all tests and validations.
+* `npm run validate:android`: Run Spotless style checker on the Java code.
+* `npm run validate:eslint`: Run `eslint`.
+* `npm run validate:eslint --fix`: Run `eslint` and automatically fix issues. This is useful for correcting code formatting.
+* `npm run validate:typescript`: Run `typescript` typechecking.
+* `npm run test:jest`: Run unit tests with `jest`.
 
 ## Sending a pull request
 When you're sending a pull request:
@@ -43,7 +43,7 @@ We prefix our commit messages with one of the following to signify the kind of c
 We use [Semantic Release](http://semantic-release.org) to automatically release new versions of the library when changes are merged into master. Using the commit message convention described above, it will detect if we need to release a patch, minor, or major version of the library.
 
 ## Reporting issues
-You can report issues on our [bug tracker](https://github.com/react-native-community/react-native-ImagePicker/issues). Please search for existing issues and follow the issue template when opening an issue.
+You can report issues on our [bug tracker](https://github.com/vovkasm/react-native-image-picker/issues). Please search for existing issues and follow the issue template when opening an issue.
 
 ## License
 By contributing to React Native ImagePicker, you agree that your contributions will be licensed under the **MIT** license.

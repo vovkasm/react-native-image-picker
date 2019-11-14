@@ -24,7 +24,7 @@ p.s. React Native introduced AndroidX support in 0.60, which is a **breaking cha
 ## Getting Started
 
 ```
-yarn add react-native-image-picker
+npm install -P react-native-image-picker
 
 # RN >= 0.60
 cd ios && pod install

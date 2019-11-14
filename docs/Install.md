@@ -1,7 +1,7 @@
 # Install
 
 ```
-yarn add react-native-image-picker
+npm install -P react-native-image-picker
 
 # RN >= 0.60
 cd ios && pod install
