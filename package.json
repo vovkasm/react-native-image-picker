@@ -7,8 +7,8 @@
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
   "files": [
-    "/android",
-    "!/android/build",
+    "/android/build.gradle",
+    "/android/src",
     "/ios",
     "/src",
     "/lib",
