@@ -70,9 +70,7 @@
     "eslint": "5.16.0",
     "eslint-config-prettier": "^5.0.0",
     "eslint-plugin-prettier": "3.0.1",
-    "husky": "^2.4.1",
     "jest": "^24.8.0",
-    "lint-staged": "^8.2.1",
     "metro-react-native-babel-preset": "^0.54.1",
     "prettier": "^1.18.2",
     "react": "16.8.6",
@@ -99,22 +97,6 @@
       ],
       "module",
       "typescript"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm test"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "npm run eslint --fix",
-      "git add"
-    ],
-    "*.java": [
-      "cd android && ./graldew spotlessApply",
-      "git add"
     ]
   }
 }
