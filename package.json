@@ -1,5 +1,5 @@
 {
-  "name": "react-native-image-picker",
+  "name": "@vovkasm/react-native-image-picker",
   "version": "1.1.0",
   "description": "A React Native module that allows you to use native UI to select media from the device library or directly from the camera",
   "react-native": "src/index.ts",
@@ -33,15 +33,15 @@
       "email": "rusfearuth@gmail.com"
     }
   ],
-  "homepage": "https://github.com/react-community/react-native-image-picker#readme",
+  "homepage": "https://github.com/vovkasm/react-native-image-picker#readme",
   "license": "MIT",
   "scripts": {
     "start": "react-native start",
-    "test": "yarn validate:eslint && yarn validate:typescript",
+    "test": "npm run validate:eslint && npm run validate:typescript",
     "validate:eslint": "eslint \"src/**/*.{js,ts,tsx}\" \"example/**/*.{js,ts,tsx}\"",
     "validate:typescript": "tsc --project ./ --noEmit",
     "test:jest": "jest \"/src/\"",
-    "ci:publish": "yarn semantic-release",
+    "ci:publish": "npm run semantic-release",
     "semantic-release": "semantic-release",
     "prepare": "bob build"
   },
@@ -85,7 +85,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-native-community/react-native-image-picker.git"
+    "url": "https://github.com/vovkasm/react-native-image-picker.git"
   },
   "@react-native-community/bob": {
     "source": "src",
@@ -104,12 +104,12 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "yarn test"
+      "pre-push": "npm test"
     }
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
-      "yarn eslint --fix",
+      "npm run eslint --fix",
       "git add"
     ],
     "*.java": [

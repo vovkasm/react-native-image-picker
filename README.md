@@ -1,16 +1,10 @@
-# React Native Image Picker
-
-[![npm version](https://badge.fury.io/js/react-native-image-picker.svg)](https://badge.fury.io/js/react-native-image-picker)
-[![npm](https://img.shields.io/npm/dt/react-native-image-picker.svg)](https://npmcharts.com/compare/react-native-image-picker?minimal=true)
-![MIT](https://img.shields.io/dub/l/vibe-d.svg)
-![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg)
-[![Gitter chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/react-native-image-picker/Lobby)
+# React Native Image Picker (fork)
 
 A React Native module that allows you to use native UI to select a photo/video from the device library or directly from the camera, like so:
 
 | iOS                                                                                                                   | Android                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| <img title="iOS" src="https://github.com/react-community/react-native-image-picker/blob/master/images/ios-image.png"> | <img title="Android" src="https://github.com/react-community/react-native-image-picker/blob/master/images/android-image.png"> |
+| <img title="iOS" src="https://github.com/vovkasm/react-native-image-picker/blob/master/images/ios-image.png"> | <img title="Android" src="https://github.com/vovkasm/react-native-image-picker/blob/master/images/android-image.png"> |
 
 #### _Before you open an issue_
 
@@ -30,7 +24,7 @@ p.s. React Native introduced AndroidX support in 0.60, which is a **breaking cha
 ## Getting Started
 
 ```
-yarn add react-native-image-picker
+npm install -P react-native-image-picker
 
 # RN >= 0.60
 cd ios && pod install
@@ -44,7 +38,7 @@ You will also need to add `UsageDescription` on iOS and some permissions on Andr
 ## Usage
 
 ```javascript
-import ImagePicker from 'react-native-image-picker';
+import ImagePicker from '@vovkasm/react-native-image-picker';
 
 // More info on all the options is below in the API Reference... just some common use cases shown here
 const options = {

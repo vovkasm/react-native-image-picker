@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import ImagePicker from 'react-native-image-picker';
+import ImagePicker from '@vovkasm/react-native-image-picker';
 
 export default class App extends React.Component {
   state = {
