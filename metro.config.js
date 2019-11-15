@@ -8,6 +8,7 @@ module.exports = {
   resolver: {
     extraNodeModules: {
       '@vovkasm/react-native-image-picker': __dirname,
-    }
-  }
+    },
+    useWatchman: false,
+  },
 }
