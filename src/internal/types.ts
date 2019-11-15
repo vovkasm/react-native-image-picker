@@ -8,61 +8,61 @@
  */
 
 export interface ImagePickerResponse {
-  customButton: string;
-  didCancel: boolean;
-  error: string;
-  data: string;
-  uri: string;
-  origURL?: string;
-  isVertical: boolean;
-  width: number;
-  height: number;
-  fileSize: number;
-  type?: string;
-  fileName?: string;
-  path?: string;
-  latitude?: number;
-  longitude?: number;
-  timestamp?: string;
+  customButton: string
+  didCancel: boolean
+  error: string
+  data: string
+  uri: string
+  origURL?: string
+  isVertical: boolean
+  width: number
+  height: number
+  fileSize: number
+  type?: string
+  fileName?: string
+  path?: string
+  latitude?: number
+  longitude?: number
+  timestamp?: string
 }
 
 export interface ImagePickerCustomButtonOptions {
-  name?: string;
-  title?: string;
+  name?: string
+  title?: string
 }
 
 export interface ImagePickerOptions {
-  title?: string;
-  cancelButtonTitle?: string;
-  takePhotoButtonTitle?: string;
-  chooseFromLibraryButtonTitle?: string;
-  chooseWhichLibraryTitle?: string;
-  customButtons?: ImagePickerCustomButtonOptions[];
-  cameraType?: 'front' | 'back';
-  mediaType?: 'photo' | 'video' | 'mixed';
-  maxWidth?: number;
-  maxHeight?: number;
-  quality?: number;
-  videoQuality?: 'low' | 'medium' | 'high';
-  durationLimit?: number;
-  rotation?: number;
-  allowsEditing?: boolean;
-  noData?: boolean;
-  storageOptions?: ImagePickerStorageOptions;
-  permissionDenied?: ImagePickerPermissionDeniedOptions;
-  tintColor?: number | string;
+  title?: string
+  cancelButtonTitle?: string
+  takePhotoButtonTitle?: string
+  chooseFromLibraryButtonTitle?: string
+  chooseWhichLibraryTitle?: string
+  customButtons?: ImagePickerCustomButtonOptions[]
+  cameraType?: 'front' | 'back'
+  mediaType?: 'photo' | 'video' | 'mixed'
+  maxWidth?: number
+  maxHeight?: number
+  quality?: number
+  videoQuality?: 'low' | 'medium' | 'high'
+  durationLimit?: number
+  rotation?: number
+  allowsEditing?: boolean
+  noData?: boolean
+  storageOptions?: ImagePickerStorageOptions
+  permissionDenied?: ImagePickerPermissionDeniedOptions
+  tintColor?: number | string
 }
 
 export interface ImagePickerStorageOptions {
-  skipBackup?: boolean;
-  path?: string;
-  cameraRoll?: boolean;
-  waitUntilSaved?: boolean;
+  skipBackup?: boolean
+  path?: string
+  cameraRoll?: boolean
+  waitUntilSaved?: boolean
 }
 
 export interface ImagePickerPermissionDeniedOptions {
-  title: string;
-  text: string;
-  reTryTitle: string;
-  okTitle: string;
+  title: string
+  text: string
+  reTryTitle: string
+  okTitle: string
 }

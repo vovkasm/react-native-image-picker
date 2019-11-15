@@ -37,8 +37,8 @@
   "license": "MIT",
   "scripts": {
     "start": "react-native start",
-    "test": "npm run validate:eslint && npm run validate:typescript",
-    "validate:eslint": "exit 0",
+    "test": "npm run validate:tslint && npm run validate:typescript",
+    "validate:tslint": "tslint -p tsconfig.json",
     "validate:typescript": "tsc --project ./ --noEmit",
     "test:jest": "jest \"/src/\"",
     "ci:publish": "npm run semantic-release",
@@ -61,6 +61,7 @@
     "@types/jest": "^24.0.15",
     "@types/react": "^16.8.22",
     "@types/react-native": "^0.57.63",
+    "@vovkasm/tslint-config": "^2.0.1",
     "babel-jest": "^24.8.0",
     "jest": "^24.8.0",
     "metro-react-native-babel-preset": "^0.54.1",
@@ -69,7 +70,12 @@
     "react-native": "0.60.0-rc.2",
     "react-test-renderer": "16.8.6",
     "ts-jest": "^24.0.2",
+    "tslint": "^5.15.0",
+    "tslint-plugin-prettier": "^2.0.1",
     "typescript": "^3.5.2"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.55.0"
   },
   "repository": {
     "type": "git",

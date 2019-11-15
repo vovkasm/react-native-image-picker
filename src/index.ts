@@ -7,38 +7,35 @@
  * @format
  */
 
-import NativeInterface from './internal/nativeInterface';
-import {ImagePickerOptions, ImagePickerResponse} from './internal/types';
-import {processColor} from 'react-native';
+import { processColor } from 'react-native'
+
+import NativeInterface from './internal/nativeInterface'
+import { ImagePickerOptions, ImagePickerResponse } from './internal/types'
 
 const DEFAULT_OPTIONS: ImagePickerOptions = {
-  title: 'Select a Photo',
-  cancelButtonTitle: 'Cancel',
-  takePhotoButtonTitle: 'Take Photo…',
-  chooseFromLibraryButtonTitle: 'Choose from Library…',
-  quality: 1.0,
   allowsEditing: false,
+  cancelButtonTitle: 'Cancel',
+  chooseFromLibraryButtonTitle: 'Choose from Library…',
   permissionDenied: {
-    title: 'Permission denied',
-    text:
-      'To be able to take pictures with your camera and choose images from your library.',
-    reTryTitle: 're-try',
     okTitle: "I'm sure",
+    reTryTitle: 're-try',
+    text: 'To be able to take pictures with your camera and choose images from your library.',
+    title: 'Permission denied',
   },
+  quality: 1.0,
+  takePhotoButtonTitle: 'Take Photo…',
   tintColor: 'blue',
-};
+  title: 'Select a Photo',
+}
 
-type Callback = (response: ImagePickerResponse) => void;
-type OptionsOrCallback = ImagePickerOptions | Callback;
+type Callback = (response: ImagePickerResponse) => void
+type OptionsOrCallback = ImagePickerOptions | Callback
 
 class ImagePicker {
-  showImagePicker(options: ImagePickerOptions, callback: Callback): void;
-  showImagePicker(callback: Callback): void;
+  showImagePicker(options: ImagePickerOptions, callback: Callback): void
+  showImagePicker(callback: Callback): void
 
-  showImagePicker(
-    optionsOrCallback: OptionsOrCallback,
-    callback?: Callback,
-  ): void {
+  showImagePicker(optionsOrCallback: OptionsOrCallback, callback?: Callback): void {
     if (typeof optionsOrCallback === 'function') {
       return NativeInterface.showImagePicker(
         {
@@ -46,23 +43,21 @@ class ImagePicker {
           tintColor: processColor(DEFAULT_OPTIONS.tintColor),
         },
         optionsOrCallback,
-      );
+      )
     }
 
     if (callback == null) {
-      throw new Error('callback cannot be undefined');
+      throw new Error('callback cannot be undefined')
     }
 
     return NativeInterface.showImagePicker(
       {
         ...DEFAULT_OPTIONS,
         ...optionsOrCallback,
-        tintColor: processColor(
-          optionsOrCallback.tintColor || DEFAULT_OPTIONS.tintColor,
-        ),
+        tintColor: processColor(optionsOrCallback.tintColor || DEFAULT_OPTIONS.tintColor),
       },
       callback,
-    );
+    )
   }
 
   launchCamera(options: ImagePickerOptions, callback: Callback): void {
@@ -73,7 +68,7 @@ class ImagePicker {
         tintColor: processColor(options.tintColor || DEFAULT_OPTIONS.tintColor),
       },
       callback,
-    );
+    )
   }
 
   launchImageLibrary(options: ImagePickerOptions, callback: Callback): void {
@@ -84,10 +79,10 @@ class ImagePicker {
         tintColor: processColor(options.tintColor || DEFAULT_OPTIONS.tintColor),
       },
       callback,
-    );
+    )
   }
 }
 
-export default new ImagePicker();
+export default new ImagePicker()
 
-export * from './internal/types';
+export * from './internal/types'

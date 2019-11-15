@@ -7,19 +7,10 @@
  * @format
  */
 
-import {ImagePickerResponse, ImagePickerOptions} from './types';
+import { ImagePickerOptions, ImagePickerResponse } from './types'
 
 export interface ImagePickerNativeModule {
-  showImagePicker(
-    options: ImagePickerOptions,
-    callback: (response: ImagePickerResponse) => void,
-  ): void;
-  launchCamera(
-    options: ImagePickerOptions,
-    callback: (response: ImagePickerResponse) => void,
-  ): void;
-  launchImageLibrary(
-    options: ImagePickerOptions,
-    callback: (response: ImagePickerResponse) => void,
-  ): void;
+  showImagePicker(options: ImagePickerOptions, callback: (response: ImagePickerResponse) => void): void
+  launchCamera(options: ImagePickerOptions, callback: (response: ImagePickerResponse) => void): void
+  launchImageLibrary(options: ImagePickerOptions, callback: (response: ImagePickerResponse) => void): void
 }
